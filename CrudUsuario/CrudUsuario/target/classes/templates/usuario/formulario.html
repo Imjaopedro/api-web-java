@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">	</head>
+<body>
+
+<div class="container">
+
+
+    <div class="jumbotron custom-jumbotron">
+        <h1 class="display-4">Adicione um novo Usuario!</h1>
+
+        <p>Aqui você irá precisar informar o nome, profissão e hobby do mesmo</p>
+
+    </div>
+
+
+
+<!--
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav text-dark text-decoration-none">
+                    <li class="nav-item"  aria-current="page">
+                        <a class="nav-link active btn btn-light"  aria-current="page" href="novo">Novo</a>
+                    </li>
+                    <li class="nav-item text-dark text-decoration-none">
+                        <a class="nav-link text-dark text-decoration-none" aria-disabled="true" href="editar">Editar</a>
+                    </li>
+                    <li class="nav-item text-dark text-decoration-none">
+                        <a class="nav-link text-dark text-decoration-none" aria-disabled="true" href="remover">Remover</a>
+                    </li>
+
+                </ul>
+            </div>
+
+    </nav>-->
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12  mb-3">
+                <form class="card mb-3" action="novo" method="post">
+                    <div class="form-group mt-2 ml-2 mr-5">
+                        <label th:for="nome">
+                            Nome:
+                        </label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="form-control">
+                    </div>
+                    <div class="form-group mt-2 ml-2 mr-5">
+                        <label th:for="profissao">
+                            Profissão:
+                        </label>
+                        <input type="text" id="profissao" name="profissao" placeholder="Digite sua profissão" class="form-control">
+                    </div>
+                    <div class="form-group mt-2 ml-2 mr-5">
+                        <label th:for="hobby">
+                            Hobby:
+                        </label>
+                        <input type="text" id="hobby" name="hobby" placeholder="Digite seu hobby" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+<style>
+    .custom-jumbotron {
+        margin: 10px;
+    }
+</style>

@@ -1,0 +1,51 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">	</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<body>
+<div class="container">
+
+    <div class="jumbotron custom-jumbotron">
+        <h1 class="display-4">Bem Vindo ao CadastrUser!</h1>
+
+        <p>Aqui você poderá adicionar, editar ou excluir um usuario!</p>
+
+    </div>
+
+
+    <nav class="text-left">
+       <div class="btn btn-success btn-sm mb-2"><a class= "nav-link text-dark text-decoration-none" href ="novo">Adicionar</a></div>
+
+    </nav>
+
+    <div class="card mb-3" th:each="usuario : ${usuarios}" id="excluir">
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12 col-sm-8 mb-3">
+                    <div class="row ">
+                        <div class="col-md-5">Nome: <span th:text="${usuario.nome}"></span></div>
+                    </div>
+                    <div>Profissão <span th:text ="${usuario.profissao}"> </span></div>
+                    <div> Hobby <span th:text = "${usuario.hobby}"></span></div>
+
+                        <a th:href = "@{editar/{id}(id=${usuario.id})}"> <button type="button" class="btn btn-warning mt-2">Editar</button></a>
+                    <a th:href = "@{excluir/{id}(id=${usuario.id})}"> <button type="button" class="btn btn-danger mt-2" >Excluir</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    .custom-jumbotron {
+        margin: 10px;
+    }
+</style>
+
